@@ -339,6 +339,7 @@ h6 {
 }
 
 /********************** Tecnologias ****************** */
+
 #Tecnologias {
   height: 100vh;
   position: relative;
@@ -347,22 +348,21 @@ h6 {
 }
 
 .circle {
-  clip-path: circle(50% at 50% 0);
+  clip-path: circle(50% at 40% 0);
   position: absolute;
-  width: 515px;
+  width: 350px;
   height: 200px;
-  left: -65px;
   top: -65px;
+  left: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: -1000;
+  padding: 20px;
   background: #043b4d;
 }
 
-.circle .titleCicle{
-  position: absolute;
-  margin: auto;
+.circle .titleCicle {
   display: flex;
   justify-content: center;
   align-content: center;
