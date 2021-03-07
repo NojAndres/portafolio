@@ -369,11 +369,72 @@ h6 {
 }
 
 .frontend {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.frontend img{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.tech{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
+.title-tech{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.backend{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+/********************** Redes Sociales ****************** */
+.background{
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  background-color: #043B4C;
+}
+
+.logos-rd{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos-rd img{
+  margin-bottom: 50px;
+  width: 88px;
+  height: 102px;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: #043B4C;
+  padding: 20px;
+}
+footer h2{
+  font-size: .8rem;
+}
 /********************** Media Query ****************** */
 @media screen and (min-width: 1024px) {
   .header {
