@@ -1,0 +1,406 @@
+/* ------------- Custom property ---------- */
+:root {
+  --font: 'Quando', 'courier,arial,helvética';
+  --font-size-mobile: 1.25rem;
+  --font-size-desktop: 1.25rem;
+  --background-cut: #233b57;
+  --background-cicle: #043b4d;
+  --secondary-color: #053848;
+  --size-width-sm-mb: 74px;
+  --size-height-sm-mb: 95px;
+  --size-width-sm-ds: 256px;
+  --size-height-sm-ds: 256px;
+  --max-width: 1200px;
+  --hader-height: 4rem;
+}
+
+/* ------------- RESET ---------- */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+/* ------------- Site Styles ---------- */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.saludo {
+  width: 20px;
+  height: 50px;
+}
+
+.none {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: var(--hader-height);
+}
+
+.header.move {
+  position: sticky;
+  top: 0;
+  background-color: black;
+}
+
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo a {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+#bars {
+  font-size: 2rem;
+  color: black;
+}
+
+/********************** Menu ****************** */
+.menu {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  padding-top: 50%;
+  padding-bottom: 50%;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.menu a:hover {
+  background-color: rgb(133, 133, 133);
+}
+
+.menu-btn {
+  outline: then solid black;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.menu-btn svg {
+  fill: white;
+}
+
+/********************** Mero Image ****************** */
+.home {
+  width: 100%;
+  height: 100vh;
+}
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/Cancha.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  height: 100vh;
+}
+.logo .image {
+  width: 248px;
+  height: 227px;
+}
+
+.hero-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-description {
+  margin-top: 20px;
+  width: 300px;
+}
+
+/********************** About Me ****************** */
+.aboutMe {
+  background-color: #233e57;
+  height: 100vh;
+  color: #eeee;
+  font-family: 'Quando', 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleAbout > h2 {
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.description {
+  font-family: 'Quando', 'Courier New', Courier, monospace;
+  font-weight: 100;
+  width: 300px;
+  text-align: justify;
+}
+
+/********************** Hobbies****************** */
+.Hobbies {
+  height: 100vh;
+  background: linear-gradient(116.82deg, rgba(8, 20, 36, 0.36) 24.48%, rgba(27, 3, 3, 0.69) 95.83%),
+    url(./img/Hobbie/Pasatiempo.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Hobbies > .title-hobbie {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbies-items {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  flex-wrap: wrap;
+}
+
+.hobbie-object {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hobbie-object .h {
+  margin-bottom: 200px;
+}
+
+/********************** Tecnologias ****************** */
+#Tecnologias {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  clip-path: circle(50% at 50% 0);
+  position: absolute;
+  width: 515px;
+  height: 200px;
+  left: -65px;
+  top: -65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1000;
+  background: #043b4d;
+}
+
+.circle .titleCicle{
+  position: absolute;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.frontend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/********************** Media Query ****************** */
+@media screen and (min-width: 1024px) {
+  .header {
+    position: absolute;
+  }
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    opacity: 1;
+    pointer-events: auto;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .menu a {
+    font-size: var(--font-size-desktop);
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    /* position: sticky; */
+    top: 0;
+    padding: 0.5rem;
+    height: cal(var(--hader-height) - 0.5rem);
+  }
+}
